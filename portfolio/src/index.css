@@ -1,10 +1,63 @@
+@font-face {
+  font-family: "Genos";
+  src: url("../fonts/Genos/Genos-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+pre {
+  height: 80px;
+  width: 120px;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  background-color: palegreen;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+.topright {
+  height: 300px;
+  width: 450px;
+  margin: 20px;
+  padding: 20px;
+  border-style: inset;
+  display: inline-block;
+  background-color: white;
+  border-width: 5px;
+  border-right: 5px solid rgba(26, 16, 16, 0);
+  border-bottom: 5px solid rgba(0, 0, 0, 0); /* Bordure de droite avec opacité 0.5 */
+
+  border-top-left-radius: 15px; /* Ajoutez cette ligne pour définir le rayon de l'angle en haut à gauche */
+  box-sizing: border-box;
+}
+
+.botleft {
+  height: 200px;
+  width: 450px;
+  margin: 20px;
+  padding: 20px;
+  border-style: inset;
+  display: inline-block;
+  background-color: white;
+  border-width: 5px;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 5px solid rgba(0, 0, 0, 0); /* Bordure de droite avec opacité 0.5 */
+
+  border-top-left-radius: 15px; /* Ajoutez cette ligne pour définir le rayon de l'angle en haut à gauche */
+  box-sizing: border-box;
+}
+
 @tailwind base;
+
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-    font-family: 'Genos';
-    src: url('../fonts/Genos/Genos-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
