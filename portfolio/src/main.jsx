@@ -6,7 +6,7 @@ import "tw-elements-react/dist/css/tw-elements-react.min.css";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.StrictMode >
     <App />
   </React.StrictMode>,
 )

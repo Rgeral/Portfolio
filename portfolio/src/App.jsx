@@ -14,9 +14,15 @@ function App() {
   }, []);
 
   return (
-    <div id="Root" className="flex justify-center items-center h-screen">
-      <div id="main" className=" flex justify-center relative max-w-7xl border-lime-500 border-4 min-h-[800px] w-[1080px]">
-        <div className="TopRightBorder px-[12px] absolute top-2 left-0">
+    <div
+      id="Root"
+      className="flex justify-center items-center h-screen border-black"
+    >
+      <div
+        id="main"
+        className=" flex justify-center relative max-w-7xl border-blue-500 border-4 h-[800px] min-w-[600px] w-[1080px]"
+      >
+        <div className="TopLeftBorder s-0:invisible s-760:visible px-[12px] absolute top-2 left-0">
           <svg
             height="400"
             width="450"
@@ -36,7 +42,7 @@ function App() {
             }}
           ></svg>
         </div>
-        <div className="BottomRightBorder absolute bottom-2 right-0 mr-10 mb-10">
+        <div className="flex s-0:invisible s-760:visible BottomRightBorder absolute bottom-2 right-0 mr mb-10">
           <svg
             height="450"
             width="400"
@@ -56,26 +62,34 @@ function App() {
             }}
           ></svg>
         </div>
-        <div className="absolute top-20 left-20 min-w-56 w-full flex flex-1 max-w-[1100px] h-[600px] border-lime-500 border-4">
-          <div className="Text px-10 py-20 max-w-xl min-w-80  border-lime-500 border-4">
-            <h1 className="text-3xl">Robin Geral</h1>
-            <p className="">
-              Ceci est un texte explicatif racontant ma vie et ce que je
-              sais/veux faire dans le monde du travail. Cela correspond à mon
-              parcours de vie, mes études, mais également à ce que je souhaite
-              devenir par la suite. Mon parcour a été un peu complexe donc ce
-              texte peut être amené à être un peu long, c'est chiant à lire mais
-              ça me permet de préparer le site.
-            </p>
-          </div>
-          <div className="px-40 py-60  border-lime-500 border-4">
-            <h1 className="text-3xl"> Projects</h1>
-            <div className="ProjectList border-l-8 border-secondary-900">
-              <h2 className="px-3 py-3 underline underline-offset-2 hover:underline-offset-4">
-                Minishell
-              </h2>
-              <h2 className="px-3 py">Transcendence</h2>
-              <h2 className="px-3 py-3">Cub3d</h2>
+        <div className="absolute top-20 left-20 min-w-[600px] w-full flex max-w-[850px] h-[600px] border-pink-500 border-4">
+          <div className="s-700:flex border-red-500">
+            <div className="Text px-20 s-700:h-13 s-700:w-[500px] py-20 max-w-xl min-w-60  border-lime-500 border-4">
+              <h1 className="text-3xl">WELCOME</h1>
+              <p className="py-2">
+                Ceci est un texte explicatif racontant ma vie et ce que je
+                sais/veux faire dans le monde du travail. Cela correspond à mon
+                parcours de vie, mes études, mais également à ce que je souhaite
+                devenir par la suite. Mon parcour a été un peu complexe donc ce
+                texte peut être amené à être un peu long, c'est chiant à lire
+                mais ça me permet de préparer le site.
+              </p>
+            </div>
+            <div className="s-700:px-20 s-700:py-60 px-20 border-yellow-400 border-4">
+              <h1 className="text-3xl"> Projects</h1>
+              <div className="ProjectList border-l-8 border-secondary-900">
+                <a href="#" className="">
+                  Minishell
+                </a>
+                <br></br>
+                <a href="#" className="">
+                  Cub3d
+                </a>
+                <br></br>
+                <a href="#" className="">
+                  Transcendence 
+                </a>
+              </div>
             </div>
           </div>
         </div>
