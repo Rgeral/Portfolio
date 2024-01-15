@@ -16,16 +16,16 @@ function App() {
   return (
     <div
       id="Root"
-      className="flex justify-center items-center h-screen border-black"
-    >
+      className="mx-auto border-black border-4 max-w-[1200px] h-800 sm:w-600 flex items-center  h-screen"
+      >
       <div
         id="main"
-        className=" flex justify-center relative max-w-7xl border-blue-500 border-4 h-[800px] min-w-[600px] w-[1080px]"
+        className="relative border-blue-500 border-4 h-[800px] w-[1200px]"
       >
-        <div className="TopLeftBorder s-0:invisible s-760:visible px-[12px] absolute top-2 left-0">
+        <div className="TopLeftBorder px-[12px] absolute top-2 left-0">
           <svg
-            height="400"
-            width="450"
+            height="300"
+            width="300"
             style={{
               margin: "10px",
               padding: "20px",
@@ -42,10 +42,10 @@ function App() {
             }}
           ></svg>
         </div>
-        <div className="flex s-0:invisible s-760:visible BottomRightBorder absolute bottom-2 right-0 mr mb-10">
+        <div className=" BottomRightBorder absolute bottom-2 right-2">
           <svg
-            height="450"
-            width="400"
+            height="300"
+            width="300"
             style={{
               margin: "10px",
               padding: "20px",
@@ -62,11 +62,11 @@ function App() {
             }}
           ></svg>
         </div>
-        <div className="absolute top-20 left-20 min-w-[600px] w-full flex max-w-[850px] h-[600px] border-pink-500 border-4">
-          <div className="s-700:flex border-red-500">
-            <div className="Text px-20 s-700:h-13 s-700:w-[500px] py-20 max-w-xl min-w-60  border-lime-500 border-4">
+        <div className="absolute flex items-center  min-w-[380px]  w-full h-[800px] border-pink-400 border-4">
+          <div className="mx-auto s-700:flex border-red-500">
+            <div className="Text px-20 s-700:h-13 s-700:w-[600px] py-20 max-w-xl min-w-60  border-lime-500 border-4">
               <h1 className="text-3xl">WELCOME</h1>
-              <p className="py-2">
+              <p className="py-2 px-2">
                 Ceci est un texte explicatif racontant ma vie et ce que je
                 sais/veux faire dans le monde du travail. Cela correspond à mon
                 parcours de vie, mes études, mais également à ce que je souhaite
@@ -75,18 +75,18 @@ function App() {
                 mais ça me permet de préparer le site.
               </p>
             </div>
-            <div className="s-700:px-20 s-700:py-60 px-20 border-yellow-400 border-4">
+            <div className="s-700:px-30 s-700:py-60 px-20 max-w-xl border-yellow-400 border-4">
               <h1 className="text-3xl"> Projects</h1>
               <div className="ProjectList border-l-8 border-secondary-900">
-                <a href="#" className="">
+                <a href="#" className="spanim">
                   Minishell
                 </a>
                 <br></br>
-                <a href="#" className="">
+                <a href="#" className="spanim">
                   Cub3d
                 </a>
                 <br></br>
-                <a href="#" className="">
+                <a href="#" className="spanim">
                   Transcendence 
                 </a>
               </div>
