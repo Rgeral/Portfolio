@@ -1,101 +1,108 @@
 import { useState, useEffect } from "react";
 import "./index.css";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import Card from "./components/articles/test";
 import { TEAnimation } from "tw-elements-react";
-import GitHubUserInfo from "./components/Github/GetUserGitHub";
-import GitHubRepoInfo from "./components/Github/GithubRepoInfo.tsx";
+
+import WelcomePage from "./components/welcomepage/welcomepage";
+import MinishellPage from "./components/projects_42/minishell.tsx";
+import TranscendencePage from "./components/projects_42/transcendence.tsx";
+import Cub3dPage from "./components/projects_42/cub3d.tsx";
+import TopBorderBox from "./components/styles/topborder.tsx";
+import BotBorderBox from "./components/styles/botborder.tsx";
+import PortefolioPage from "./components/projects_perso/potfolio.tsx";
 
 function App() {
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [currentPage, setCurrentPage] = useState("welcome");
+  const [isPageVisible, setIsPageVisible] = useState(true); // Nouvel état pour gérer la visibilité de la page
 
   useEffect(() => {
     setHasLoaded(true);
   }, []);
 
+  const handleLinkClick = (page) => {
+    if (page != currentPage) {
+      setIsPageVisible(false); // Commencer la transition de sortie
+      setCurrentPage(page);
+      setTimeout(() => {
+        setIsPageVisible(true); // Commencer la transition d'entrée
+      }, 200); // Ajustez la durée de la transition en fonction de la valeur dans votre CSS
+    } else {
+      setIsPageVisible(false); // Commencer la transition de sortie
+      setCurrentPage("welcome");
+      setTimeout(() => {
+        setIsPageVisible(true); // Commencer la transition d'entrée
+      }, 200);
+    }
+  };
+  const renderContent = () => {
+    switch (currentPage) {
+      case "welcome":
+        return <WelcomePage isVisible={isPageVisible} />;
+      case "minishell":
+        return <MinishellPage isVisible={isPageVisible} />;
+      case "cub3d":
+        return <Cub3dPage isVisible={isPageVisible} />;
+      case "transcendence":
+        return <TranscendencePage isVisible={isPageVisible} />;
+      // ... autres cas
+      default:
+        return null;
+    }
+  };
+
   return (
     <div
       id="Root"
       className="mx-auto border-black  max-w-[1200px] h-800 sm:w-600 flex items-center  h-screen"
-      >
-      <div
-        id="main"
-        className="relative  h-[800px] w-[1200px]"
-      >
-        <div className="TopLeftBorder px-[12px] absolute top-2 left-0">
-          <svg
-            height="300"
-            width="300"
-            style={{
-              margin: "10px",
-              padding: "20px",
-              borderStyle: "inset",
-              display: "inline-block",
-              backgroundColor: "white",
-              borderWidth: "20px",
-              borderTop: "25px solid",
-              borderLeft: "25px solid",
-              borderRight: "5px solid rgba(0, 0, 0, 0)",
-              borderBottom: "5px solid rgba(0, 0, 0, 0)",
-              borderTopLeftRadius: "15px",
-              boxSizing: "border-box",
-            }}
-          ></svg>
-        </div>
-        <div className=" BottomRightBorder absolute bottom-2 right-2">
-          <svg
-            height="300"
-            width="300"
-            style={{
-              margin: "10px",
-              padding: "20px",
-              borderStyle: "inset",
-              display: "inline-block",
-              backgroundColor: "white",
-              borderWidth: "20px",
-              borderTop: "5px solid rgba(0, 0, 0, 0)",
-              borderLeft: "5px solid rgba(0, 0, 0, 0)",
-              borderRight: "25px solid",
-              borderBottom: "25px solid",
-              borderBottomRightRadius: "15px",
-              boxSizing: "border-box",
-            }}
-          ></svg>
-        </div>
+    >
+      <div id="main" className="relative  h-[800px] w-[1200px]">
+        <TopBorderBox />
+        <BotBorderBox />
+
         <div className="absolute flex items-center  min-w-[380px]  w-full h-[800px] ">
           <div className="mx-auto s-700:flex ">
-            <div className="Text px-20 s-700:h-13 s-700:w-[600px] py-20 max-w-xl min-w-60  ">
-              <h1 className="text-3xl">WELCOME</h1>
-              <p className="py-2 px-2">
-                Ceci est un texte explicatif racontant ma vie et ce que je
-                sais/veux faire dans le monde du travail. Cela correspond à mon
-                parcours de vie, mes études, mais également à ce que je souhaite
-                devenir par la suite. Mon parcour a été un peu complexe donc ce
-                texte peut être amené à être un peu long, c'est chiant à lire
-                mais ça me permet de préparer le site.
-              </p>
-            </div>
-            <div className="s-700:px-30 s-700:py-60 px-20 max-w-xl border-yellow-400 ">
+            {/* <a
+              href="#"
+              className="spanim px-14"
+              onClick={() => handleLinkClick("welcome")}
+            >
+              Debug
+            </a> */}
+            {renderContent()}
+            <div className="s-700:px-30 s-700:py-60 px-20 mt-0 max-w-xl">
               <h1 className="text-3xl"> Projects</h1>
               <div className="ProjectList border-l-8 border-secondary-900">
-                <a href="#" className="spanim">
+                <a
+                  href="#"
+                  className="spanim"
+                  onClick={() => handleLinkClick("minishell")}
+                >
                   Minishell
                 </a>
                 <br></br>
-                <a href="#" className="spanim">
+                <a
+                  href="#"
+                  className="spanim"
+                  onClick={() => handleLinkClick("cub3d")}
+                >
                   Cub3d
                 </a>
                 <br></br>
-                <a href="#" className="spanim">
-                  Transcendence 
+                <a
+                  href="#"
+                  className="spanim"
+                  onClick={() => handleLinkClick("transcendence")}
+                >
+                  Transcendence
                 </a>
                 <br></br>
                 <a href="#" className="spanim">
-                  Portfolio 
+                  Portfolio
                 </a>
                 <br></br>
                 <a href="#" className="spanim">
-                  Aléa 
+                  Aléa
                 </a>
               </div>
             </div>
