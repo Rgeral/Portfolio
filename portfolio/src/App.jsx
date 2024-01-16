@@ -45,6 +45,8 @@ function App() {
         return <Cub3dPage isVisible={isPageVisible} />;
       case "transcendence":
         return <TranscendencePage isVisible={isPageVisible} />;
+      case "portfolio":
+        return <PortefolioPage isVisible={isPageVisible} />;
       // ... autres cas
       default:
         return null;
@@ -62,13 +64,6 @@ function App() {
 
         <div className="absolute flex items-center  min-w-[380px]  w-full h-[800px] ">
           <div className="mx-auto s-700:flex ">
-            {/* <a
-              href="#"
-              className="spanim px-14"
-              onClick={() => handleLinkClick("welcome")}
-            >
-              Debug
-            </a> */}
             {renderContent()}
             <div className="s-700:px-30 s-700:py-60 px-20 mt-0 max-w-xl">
               <h1 className="text-3xl"> Projects</h1>
@@ -97,7 +92,11 @@ function App() {
                   Transcendence
                 </a>
                 <br></br>
-                <a href="#" className="spanim">
+                <a
+                  href="#"
+                  className="spanim"
+                  onClick={() => handleLinkClick("portfolio")}
+                >
                   Portfolio
                 </a>
                 <br></br>
