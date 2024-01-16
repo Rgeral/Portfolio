@@ -16,11 +16,11 @@ function App() {
   return (
     <div
       id="Root"
-      className="mx-auto border-black border-4 max-w-[1200px] h-800 sm:w-600 flex items-center  h-screen"
+      className="mx-auto border-black  max-w-[1200px] h-800 sm:w-600 flex items-center  h-screen"
       >
       <div
         id="main"
-        className="relative border-blue-500 border-4 h-[800px] w-[1200px]"
+        className="relative  h-[800px] w-[1200px]"
       >
         <div className="TopLeftBorder px-[12px] absolute top-2 left-0">
           <svg
@@ -62,9 +62,9 @@ function App() {
             }}
           ></svg>
         </div>
-        <div className="absolute flex items-center  min-w-[380px]  w-full h-[800px] border-pink-400 border-4">
-          <div className="mx-auto s-700:flex border-red-500">
-            <div className="Text px-20 s-700:h-13 s-700:w-[600px] py-20 max-w-xl min-w-60  border-lime-500 border-4">
+        <div className="absolute flex items-center  min-w-[380px]  w-full h-[800px] ">
+          <div className="mx-auto s-700:flex ">
+            <div className="Text px-20 s-700:h-13 s-700:w-[600px] py-20 max-w-xl min-w-60  ">
               <h1 className="text-3xl">WELCOME</h1>
               <p className="py-2 px-2">
                 Ceci est un texte explicatif racontant ma vie et ce que je
@@ -75,7 +75,7 @@ function App() {
                 mais ça me permet de préparer le site.
               </p>
             </div>
-            <div className="s-700:px-30 s-700:py-60 px-20 max-w-xl border-yellow-400 border-4">
+            <div className="s-700:px-30 s-700:py-60 px-20 max-w-xl border-yellow-400 ">
               <h1 className="text-3xl"> Projects</h1>
               <div className="ProjectList border-l-8 border-secondary-900">
                 <a href="#" className="spanim">
@@ -88,6 +88,14 @@ function App() {
                 <br></br>
                 <a href="#" className="spanim">
                   Transcendence 
+                </a>
+                <br></br>
+                <a href="#" className="spanim">
+                  Portfolio 
+                </a>
+                <br></br>
+                <a href="#" className="spanim">
+                  Aléa 
                 </a>
               </div>
             </div>
