@@ -10,6 +10,7 @@ import Cub3dPage from "./components/projects_42/cub3d.tsx";
 import TopBorderBox from "./components/styles/topborder.tsx";
 import BotBorderBox from "./components/styles/botborder.tsx";
 import PortefolioPage from "./components/projects_perso/potfolio.tsx";
+import AleasPage from "./components/projects_perso/aleas.tsx";
 
 function App() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -22,16 +23,16 @@ function App() {
 
   const handleLinkClick = (page) => {
     if (page != currentPage) {
-      setIsPageVisible(false); // Commencer la transition de sortie
+      setIsPageVisible(false); 
       setCurrentPage(page);
       setTimeout(() => {
-        setIsPageVisible(true); // Commencer la transition d'entrée
-      }, 200); // Ajustez la durée de la transition en fonction de la valeur dans votre CSS
+        setIsPageVisible(true); 
+      }, 200); 
     } else {
-      setIsPageVisible(false); // Commencer la transition de sortie
+      setIsPageVisible(false); 
       setCurrentPage("welcome");
       setTimeout(() => {
-        setIsPageVisible(true); // Commencer la transition d'entrée
+        setIsPageVisible(true); 
       }, 200);
     }
   };
@@ -47,6 +48,8 @@ function App() {
         return <TranscendencePage isVisible={isPageVisible} />;
       case "portfolio":
         return <PortefolioPage isVisible={isPageVisible} />;
+      case "Aleas":
+        return <AleasPage isVisible={isPageVisible} />;
       // ... autres cas
       default:
         return null;
@@ -71,22 +74,6 @@ function App() {
                 <a
                   href="#"
                   className="spanim"
-                  onClick={() => handleLinkClick("minishell")}
-                >
-                  Minishell
-                </a>
-                <br></br>
-                <a
-                  href="#"
-                  className="spanim"
-                  onClick={() => handleLinkClick("cub3d")}
-                >
-                  Cub3d
-                </a>
-                <br></br>
-                <a
-                  href="#"
-                  className="spanim"
                   onClick={() => handleLinkClick("transcendence")}
                 >
                   Transcendence
@@ -100,8 +87,12 @@ function App() {
                   Portfolio
                 </a>
                 <br></br>
-                <a href="#" className="spanim">
-                  Aléa
+                <a
+                  href="#"
+                  className="spanim"
+                  onClick={() => handleLinkClick("Aleas")}
+                >
+                  Aléas
                 </a>
               </div>
             </div>

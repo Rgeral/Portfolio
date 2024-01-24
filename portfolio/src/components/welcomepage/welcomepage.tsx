@@ -8,7 +8,7 @@ import { CiLinkedin } from "react-icons/ci";
 const WelcomePage = ({ isVisible }) => {
   return (
     <div
-      className={`Text px-20 s-700:h-13 s-700:w-[600px] py-10 max-w-3xl min-w-60 ${
+      className={`Text px-20 s-700:h-13 s-700:w-[600px] py-20 max-w-3xl min-w-60 ${
         isVisible ? "fade-in" : "fade-out"
       }`}
     >
