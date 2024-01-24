@@ -3,7 +3,7 @@ import "./index.css";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { TEAnimation } from "tw-elements-react";
 
-import WelcomePage from "./components/welcomepage/welcomepage";
+import WelcomePage from "./components/welcomepage/welcomepage.tsx";
 import MinishellPage from "./components/projects_42/minishell.tsx";
 import TranscendencePage from "./components/projects_42/transcendence.tsx";
 import Cub3dPage from "./components/projects_42/cub3d.tsx";
@@ -23,16 +23,16 @@ function App() {
 
   const handleLinkClick = (page) => {
     if (page != currentPage) {
-      setIsPageVisible(false); 
+      setIsPageVisible(false);
       setCurrentPage(page);
       setTimeout(() => {
-        setIsPageVisible(true); 
-      }, 200); 
+        setIsPageVisible(true);
+      }, 200);
     } else {
-      setIsPageVisible(false); 
+      setIsPageVisible(false);
       setCurrentPage("welcome");
       setTimeout(() => {
-        setIsPageVisible(true); 
+        setIsPageVisible(true);
       }, 200);
     }
   };
