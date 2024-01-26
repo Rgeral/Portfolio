@@ -60,7 +60,7 @@ function App() {
       id="Root"
       className="mx-auto border-black  max-w-[1200px] h-800 sm:w-600 flex items-center  h-screen"
     >
-      <div id="main" className="relative  min-h-[300px] sm:min-h-[600px] w-full h-4/5">
+      <div id="main" className="relative  min-h-[600px] w-full h-4/5">
         <TopBorderBox />
         <BotBorderBox />
 
