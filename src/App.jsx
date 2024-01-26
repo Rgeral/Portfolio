@@ -50,7 +50,6 @@ function App() {
         return <PortefolioPage isVisible={isPageVisible} />;
       case "Aleas":
         return <AleasPage isVisible={isPageVisible} />;
-      // ... autres cas
       default:
         return null;
     }
