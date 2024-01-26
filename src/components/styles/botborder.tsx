@@ -6,10 +6,10 @@ const BotBorderBox = () => {
     <div className=" BottomRightBorder absolute bottom-2 right-2">
       <svg
         height="300"
-        width="300"
+        width="250"
         style={{
-          margin: "10px",
-          padding: "20px",
+          margin: "0px",
+          padding: "25px",
           borderStyle: "inset",
           display: "inline-block",
           backgroundColor: "white",

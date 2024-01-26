@@ -4,7 +4,6 @@ import "../../index.css"; // Assurez-vous d'importer votre fichier de styles
 import { MdOutgoingMail } from "react-icons/md";
 import { CiLinkedin } from "react-icons/ci";
 
-
 const WelcomePage = ({ isVisible }) => {
   return (
     <div
@@ -30,10 +29,11 @@ const WelcomePage = ({ isVisible }) => {
         </a>
       </div>
       <p className="py-2 px-2">
-        Hello, I'm Robin. At the age of 27, I made a pivotal decision to pursue
-        a career transition into the field of development, enrolling at École
-        42. Having successfully completed my curriculum, I am currently in
-        search of opportunities for an internship as a junior developer. <br />
+        Hello! My name is Robin. I'm a young developer, curious, dynamic, and
+        full of energy!<br/> At the age of 27, I made a pivotal decision to pursue a
+        career transition into the field of development, enrolling at École 42.
+        Having successfully completed my curriculum, I am currently in search of
+        opportunities for an internship as a junior developer. <br />
         Within these pages, you'll discover a glimpse of some of the projects
         I've undertaken during my time at school, as well as personal projects
         crafted during my leisure hours. <br />I am driven by curiosity and am
