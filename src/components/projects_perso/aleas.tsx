@@ -2,6 +2,7 @@
 import React from "react";
 import "../../index.css"; // Assurez-vous d'importer votre fichier de styles
 import { FaGithub } from "react-icons/fa";
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 export const AleasPage = ({ isVisible }) => {
   return (
@@ -11,7 +12,11 @@ export const AleasPage = ({ isVisible }) => {
       }`}
     >
       <div className="flex">
+        <a href="">
+          <MdOutlineArrowBackIos className="mr-5" size={40} />
+        </a>
         <h1 className="text-3xl mb-5">Aléas</h1>
+
         <a
           href="https://github.com/PierreLemmel/plml-shows-api"
           target="_blank"
@@ -21,10 +26,10 @@ export const AleasPage = ({ isVisible }) => {
         </a>
       </div>
       <p>
-        Aléas is a project initiated by Pierre Lemmel, an actor in the "Les
-        Écorcés" troupe. I recently joined the project voluntarily to assist and
-        learn new things under the guidance of Pierre, a former experienced
-        developer. <br />
+        Aléas is a project initiated by Pierre Lemmel, the artistic director in
+        the "Tout est dans le Titre" troupe. I recently joined the project
+        voluntarily to assist and learn new things under the guidance of Pierre,
+        a former experienced developer. <br />
         The project aims to integrate technology into improvisational theater
         through randomly generated music or lights controlled by the program.
         The actors must adapt to the program and perform accordingly! This

@@ -2,6 +2,8 @@
 import React from "react";
 import "../../index.css"; // Assurez-vous d'importer votre fichier de styles
 import { FaGithub } from "react-icons/fa";
+import { MdOutlineArrowBackIos } from "react-icons/md";
+
 
 export const TranscendencePage = ({ isVisible }) => {
   return (
@@ -11,6 +13,9 @@ export const TranscendencePage = ({ isVisible }) => {
       }`}
     >
       <div className="flex">
+      <a href="">
+        <MdOutlineArrowBackIos className="mr-5" size={40}/>
+        </a>
         <h1 className="text-3xl mb-5">Transcendence</h1>
         <a
           href="https://github.com/Rgeral/ft_transcendence"

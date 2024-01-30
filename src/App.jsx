@@ -50,7 +50,6 @@ function App() {
         return <PortefolioPage isVisible={isPageVisible} />;
       case "Aleas":
         return <AleasPage isVisible={isPageVisible} />;
-      // ... autres cas
       default:
         return null;
     }
@@ -61,11 +60,11 @@ function App() {
       id="Root"
       className="mx-auto border-black  max-w-[1200px] h-800 sm:w-600 flex items-center  h-screen"
     >
-      <div id="main" className="relative  h-[800px] w-[1200px]">
+      <div id="main" className="relative  min-h-[600px] w-full h-4/5">
         <TopBorderBox />
         <BotBorderBox />
 
-        <div className="absolute flex items-center  min-w-[380px]  w-full h-[800px] ">
+        <div className="absolute flex items-center  min-w-[380px]  w-full h-full">
           <div className="mx-auto s-700:flex ">
             {renderContent()}
             <div className="s-700:px-30 s-700:py-60 px-20 mt-0 max-w-xl">
