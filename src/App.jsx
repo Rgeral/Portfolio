@@ -11,6 +11,7 @@ import TopBorderBox from "./components/styles/topborder.tsx";
 import BotBorderBox from "./components/styles/botborder.tsx";
 import PortefolioPage from "./components/projects_perso/potfolio.tsx";
 import AleasPage from "./components/projects_perso/aleas.tsx";
+import SnowCrashPage from "./components/projects_42/snowcrash.tsx";
 
 function App() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -50,6 +51,8 @@ function App() {
         return <PortefolioPage isVisible={isPageVisible} />;
       case "Aleas":
         return <AleasPage isVisible={isPageVisible} />;
+      case "SnowCrash":
+        return <SnowCrashPage isVisible={isPageVisible} />;
       default:
         return null;
     }
@@ -92,6 +95,14 @@ function App() {
                   onClick={() => handleLinkClick("Aleas")}
                 >
                   Aléas
+                </a>
+                <br></br>
+                <a
+                  href="#"
+                  className="spanim"
+                  onClick={() => handleLinkClick("SnowCrash")}
+                >
+                  SnowCrash
                 </a>
               </div>
             </div>
