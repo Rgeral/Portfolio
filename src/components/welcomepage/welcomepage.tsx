@@ -21,7 +21,7 @@ const WelcomePage = ({ isVisible }) => {
           <MdOutgoingMail className="ml-5 mt-1" size={30} />
         </a>
         <a
-          href="https://www.linkedin.com/in/robin-geral-b93b73233/"
+          href="https://www.linkedin.com/in/robin-geral/"
           target="_blank"
           rel="noopener noreferrer"
         >
